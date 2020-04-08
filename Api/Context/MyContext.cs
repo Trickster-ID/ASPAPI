@@ -7,9 +7,9 @@ using System.Web;
 
 namespace Api.Context
 {
-    public class MyContext : DbContext
+    public class myContext : DbContext
     {
-        public MyContext() : base("conapi") { }
+        public myContext() : base("conapi") { }
         public DbSet<Department> Departments { get; set; }
     }
 }

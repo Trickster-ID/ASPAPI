@@ -1,4 +1,5 @@
-﻿using Api.Migrations;
+﻿using Api.Context;
+using Api.Migrations;
 using Api.Models;
 using Api.Repository;
 using System;
@@ -16,6 +17,7 @@ namespace Api.Controllers
     {
         
         DepartmentRepository departments = new DepartmentRepository();
+        myContext conn123 = new myContext();
         [HttpGet]
         public IEnumerable<Department> Get()
         {
@@ -29,12 +31,12 @@ namespace Api.Controllers
         }
         public IHttpActionResult Post(Department department)
         {
-            var post = departments.Create(department);
-            if (post > 0)
+            if (department.Name == "")
             {
-                return Ok("Department Add Successfully");
+                return Content(HttpStatusCode.NotFound, "Failed to Add Department");
             }
-            return BadRequest("Failed to Add Department");
+            departments.Create(department);
+            return Ok("Department Add Successfully");
         }
         public IHttpActionResult Put(int Id, Department department)
         {
@@ -53,6 +55,21 @@ namespace Api.Controllers
                 return Ok("Department Delete Successfully");
             }
             return BadRequest("Failed to Delete");
+            //var dept_id = conn.Departments.FirstOrDefault(x => x.Id == Id);
+
+            //if (dept_id == null)
+            //{
+            //    return BadRequest("Failed to delete department");
+            //}
+            //else
+            //{
+            //    departments.Delete(Id);
+            //    return Ok("Deleted successfully");
+            //}
         }
+        //public HttpResponseMessage (int Id)
+        //{
+        //    var nama = departments
+        //}
     }
 }

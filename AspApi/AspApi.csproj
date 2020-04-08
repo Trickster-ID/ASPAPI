@@ -3263,6 +3263,7 @@
     <Content Include="Content\Mini AdminPro\main\scss\icons\weather-icons\less\css\variables-time.css" />
     <Content Include="Content\Mini AdminPro\main\scss\icons\weather-icons\less\css\variables-wind-names.css" />
     <Content Include="Content\Mini AdminPro\main\table-data-table.html" />
+    <Content Include="Content\Sweetalert2.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

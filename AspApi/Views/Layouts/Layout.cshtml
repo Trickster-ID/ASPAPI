@@ -23,7 +23,7 @@
     <!-- You can change the theme colors from here -->
     <link href="~/Content/Mini AdminPro/main/css/colors/blue.css" id="theme" rel="stylesheet">
     <link href="~/Content/Mini AdminPro/assets/plugins/jqueryui/jquery-ui.min.css" rel="stylesheet" />
-    <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    @*<link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />*@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -723,7 +723,8 @@
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
-    <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    
+    @*<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>*@
     <script src="~/Content/Mini AdminPro/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="~/Content/Mini AdminPro/assets/plugins/bootstrap/js/popper.min.js"></script>
@@ -740,7 +741,6 @@
     <script src="~/Content/Mini AdminPro/main/js/custom.min.js"></script>
     <!-- This is data table -->
     <script src="~/Content/Mini AdminPro/assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    @*<script src="~/Scripts/Supplier.js"></script>*@
     <!-- start - This is for export functionality only -->
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
@@ -749,61 +749,68 @@
     <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
-    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
     <script src="~/Content/Mini AdminPro/assets/plugins/jqueryui/jquery-ui.min.js"></script>
     <script src="~/Scripts/Dept.js"></script>
     <script src="~/Content/Mini AdminPro/assets/plugins/moment/moment.js"></script>
     <script src="~/Content/Sweetalert2.js"></script>
-    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>*@
-    @*<script src="~/Scripts/newscri/jquery-ui-1.12.1.min.js"></script>*@
+
+    @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>*@
     <!-- end - This is for export functionality only -->
     @*<script>
-            var popup, datatable;
-            $(document).ready(function () {
-                datatable = $('#myTable').DataTable({
-                    "columns": [
-                        { "Name": "first", "orderable": true },
-                        { "Address": "second", "orderable": true },
-                        { "Email": "third", "orderable": true },
-                        { "Password": "fourth", "orderable": true },
-                        { "Role": "fifth", "orderable": true },
-                        { "Action": "sixth", "orderable": false }
+                var popup, datatable;
+                $(document).ready(function () {
+                    datatable = $('#myTable').DataTable({
+                        "columns": [
+                            { "Name": "first", "orderable": true },
+                            { "Address": "second", "orderable": true },
+                            { "Email": "third", "orderable": true },
+                            { "Password": "fourth", "orderable": true },
+                            { "Role": "fifth", "orderable": true },
+                            { "Action": "sixth", "orderable": false }
 
+                        ]
+                    })
+                });
+                function popupform(url) {
+                    var formdiv = $('<div/>');
+                    $.get(url)
+                        .done(function (response) {
+                            formdiv.html(response);
+
+                            popup = formdiv.dialog({
+                                autoOpen: true,
+                                resizable: true,
+                                title: 'Fill Create Supplier',
+                                height: 500,
+                                width: 700,
+                                close: function () {
+                                    popup.dialog('destroy').remove();
+                                }
+                            });
+                        });
+                }
+        </script>*@
+    @*<script>
+            $(document).ready(function () {
+                $('#datatable').DataTable({
+                    "columns": [
+                        { "Negara": "first", "orderable": true },
+                        { "Case": "second", "orderable": true },
+                        { "Death": "third", "orderable": true },
+                        { "Recovered": "fourth", "orderable": true },
+                        { "Action": "fifth", "orderable": false }
                     ]
                 })
             });
-            function popupform(url) {
-                var formdiv = $('<div/>');
-                $.get(url)
-                    .done(function (response) {
-                        formdiv.html(response);
-
-                        popup = formdiv.dialog({
-                            autoOpen: true,
-                            resizable: true,
-                            title: 'Fill Create Supplier',
-                            height: 500,
-                            width: 700,
-                            close: function () {
-                                popup.dialog('destroy').remove();
-                            }
-                        });
-                    });
-            }
-    </script>*@
-@*<script>
-    $(document).ready(function () {
-        $('#datatable').DataTable({
-            "columns": [
-                { "Negara": "first", "orderable": true },
-                { "Case": "second", "orderable": true },
-                { "Death": "third", "orderable": true },
-                { "Recovered": "fourth", "orderable": true },
-                { "Action": "fifth", "orderable": false }
-            ]
-        })
-    });
-</script>*@
+        </script>*@
     @*<script>
             $('#myBtn').on('shown.bs.modal', function () {
                 $('#myInput').trigger('focus')

@@ -5,14 +5,14 @@ namespace Api.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Api.Context.MyContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Api.Context.myContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Api.Context.MyContext context)
+        protected override void Seed(Api.Context.myContext context)
         {
             //  This method will be called after migrating to the latest version.
 
