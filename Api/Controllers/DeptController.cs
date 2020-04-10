@@ -1,5 +1,4 @@
 ﻿using Api.Context;
-using Api.Migrations;
 using Api.Models;
 using Api.Repository;
 using System;
@@ -17,33 +16,40 @@ namespace Api.Controllers
     {
         
         DepartmentRepository departments = new DepartmentRepository();
-        myContext conn123 = new myContext();
         [HttpGet]
-        public IEnumerable<Department> Get()
+        public IHttpActionResult Get()
         {
-            return departments.Get();
+            if (departments.Get() == null)
+            {
+                return Content(HttpStatusCode.NotFound, "Data Department is Empty!");
+            }
+            return Ok(departments.Get());
         }
         [HttpGet]
         [ResponseType(typeof(Department))]
         public async Task<IEnumerable<Department>> Get(int Id)
         {
+            if (await departments.Get(Id) == null)
+            {
+                return null;
+            }
             return await departments.Get(Id);
         }
         public IHttpActionResult Post(Department department)
         {
-            if (department.Name == "")
+            if ((department.Name != null) || (department.Name != ""))
             {
-                return Content(HttpStatusCode.NotFound, "Failed to Add Department");
+                departments.Create(department);
+                return Ok("Department Add Successfully!");
             }
-            departments.Create(department);
-            return Ok("Department Add Successfully");
+            return BadRequest("Failed to Add Department");
         }
         public IHttpActionResult Put(int Id, Department department)
         {
-            var put = departments.Update(Id, department);
-            if (put > 0)
+            if ((department.Name != null) && (department.Name != ""))
             {
-                return Ok("Department Update Successfully");
+                departments.Update(Id, department);
+                return Ok("Department Updated Successfully!");
             }
             return BadRequest("Failed to Update Department");
         }
@@ -55,21 +61,6 @@ namespace Api.Controllers
                 return Ok("Department Delete Successfully");
             }
             return BadRequest("Failed to Delete");
-            //var dept_id = conn.Departments.FirstOrDefault(x => x.Id == Id);
-
-            //if (dept_id == null)
-            //{
-            //    return BadRequest("Failed to delete department");
-            //}
-            //else
-            //{
-            //    departments.Delete(Id);
-            //    return Ok("Deleted successfully");
-            //}
         }
-        //public HttpResponseMessage (int Id)
-        //{
-        //    var nama = departments
-        //}
     }
 }

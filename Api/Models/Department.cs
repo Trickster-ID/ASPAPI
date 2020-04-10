@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Api.Models
 {
-    [Table("Department")]
+    [Table("TB_M_Department")]
     public class Department
     {
         [Key]
@@ -17,8 +17,8 @@ namespace Api.Models
         public DateTimeOffset CreateDate { get; set; }
         public Nullable<DateTimeOffset> UpdateDate { get; set; }
         public Nullable<DateTimeOffset> DeleteDate { get; set; }
-        public Department() { }
 
+        public Department() { }
         public Department(Department department) //create
         {
             this.Name = department.Name;

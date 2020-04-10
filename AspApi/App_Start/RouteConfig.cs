@@ -16,7 +16,7 @@ namespace AspApi
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Dept", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Division", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

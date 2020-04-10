@@ -26,16 +26,6 @@ namespace Api.Repository
             return create;
         }
 
-        //public int Update(Department department, int id)
-        //{
-        //    //throw new NotImplementedException();
-        //    var procName = "SP_Update";
-        //    parameters.Add("@Id", id); 
-        //    parameters.Add("@Name", department.Name);
-        //    var update = conn.Execute(procName, parameters, commandType: CommandType.StoredProcedure);
-        //    return update;
-        //}
-
         public int Delete(int Id)
         {
             //throw new NotImplementedException();

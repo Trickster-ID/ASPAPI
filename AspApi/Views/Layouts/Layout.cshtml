@@ -370,9 +370,9 @@
                             <ul aria-expanded="false" class="collapse">
                                 @*<li><a href="@Url.Action("Index", "Supplier")">Supplier</a></li>
                                     <li><a href="@Url.Action("Index", "Item")">Item</a></li>*@
-                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                                <li>@Html.ActionLink("About", "About", "Home")</li>
-                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("Department", "Index", "Dept")</li>
+                                <li>@Html.ActionLink("Division", "Index", "Division")</li>
+
 
                                 @if (User.IsInRole("Admin"))
                                 {
@@ -723,7 +723,6 @@
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
-    
     @*<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>*@
     <script src="~/Content/Mini AdminPro/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
@@ -751,18 +750,18 @@
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
 
     <script src="~/Content/Mini AdminPro/assets/plugins/jqueryui/jquery-ui.min.js"></script>
-    <script src="~/Scripts/Dept.js"></script>
+    
     <script src="~/Content/Mini AdminPro/assets/plugins/moment/moment.js"></script>
     <script src="~/Content/Sweetalert2.js"></script>
-
+    
     @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
 
-    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
 
-    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>*@
+        <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>*@
     <!-- end - This is for export functionality only -->
     @*<script>
                 var popup, datatable;
