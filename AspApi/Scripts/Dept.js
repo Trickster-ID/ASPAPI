@@ -14,7 +14,8 @@
             { "data": "Name" },
             {
                 "data": "CreateDate", "render": function (data) {
-                    return moment(data).format('DD/MM/YYYY');
+                    //return moment(data).format('DD/MM/YYYY');
+                    return moment(data).format('DD/MM/YYYY, h:mm a');
                 }
             },
             {
@@ -24,7 +25,7 @@
                     if (data == nulldate) {
                         return dateupdate;
                     } else {
-                        return moment(data).format('DD/MM/YYYY');
+                        return moment(data).format('DD/MM/YYYY, h:mm a');
                     }
                 }
             },
