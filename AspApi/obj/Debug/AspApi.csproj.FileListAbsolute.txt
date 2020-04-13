@@ -54,6 +54,8 @@ D:\VisualBC\AspApi\AspApi\bin\Antlr3.Runtime.dll
 D:\VisualBC\AspApi\AspApi\bin\Api.dll
 D:\VisualBC\AspApi\AspApi\bin\EntityFramework.dll
 D:\VisualBC\AspApi\AspApi\bin\EntityFramework.SqlServer.dll
+D:\VisualBC\AspApi\AspApi\bin\EPPlus.dll
+D:\VisualBC\AspApi\AspApi\bin\itextsharp.dll
 D:\VisualBC\AspApi\AspApi\bin\Microsoft.AspNet.Identity.Core.dll
 D:\VisualBC\AspApi\AspApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\VisualBC\AspApi\AspApi\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -84,6 +86,8 @@ D:\VisualBC\AspApi\AspApi\bin\Dapper.dll
 D:\VisualBC\AspApi\AspApi\bin\System.Web.Http.WebHost.dll
 D:\VisualBC\AspApi\AspApi\bin\Api.pdb
 D:\VisualBC\AspApi\AspApi\bin\Api.dll.config
+D:\VisualBC\AspApi\AspApi\bin\EPPlus.xml
+D:\VisualBC\AspApi\AspApi\bin\itextsharp.xml
 D:\VisualBC\AspApi\AspApi\bin\System.Net.Http.Formatting.xml
 D:\VisualBC\AspApi\AspApi\bin\System.Web.Helpers.xml
 D:\VisualBC\AspApi\AspApi\bin\System.Web.Mvc.xml

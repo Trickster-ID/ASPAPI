@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var datenow = new Date();
+$(document).ready(function () {
     table = $('#Department').dataTable({
         "ajax": {
             url: "/Dept/cloadDepartment",
@@ -6,6 +7,46 @@
             dataType: "json",
             dataSrc: "",
         },
+        //dom: 'Bfrtip',
+        //buttons: [
+        //    {
+        //        extend: 'copyHtml5',
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    },
+        //    {
+        //        extend: 'csvHtml5',
+        //        filename: function () {
+        //            return 'tabledept ' + moment(datenow).format('DD/MM/YYYY');
+        //        },
+        //        title: 'Table Department',
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    },
+        //    {
+        //        extend: 'excelHtml5',
+        //        filename: function () {
+        //            return 'tabledept ' + moment(datenow).format('DD/MM/YYYY');
+        //        },
+        //        title: 'Table Department',
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    },
+        //    {
+        //        extend: 'pdfHtml5',
+        //        filename: function () {
+        //            return 'tabledept ' + moment(datenow).format('DD/MM/YYYY');
+        //        },
+        //        title: 'Table Department',
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    },
+        //    'print'
+        //],
         "columnDefs": [
             { "orderable": false, "targets": 3 },
             { "searchable": false, "targets": 3 }
@@ -187,3 +228,13 @@ function Delete(Id) {
         }
     });
 } //function delete
+
+//$(document).ready(function () {
+//    $.fn.dataTable.ext.errMode = 'none';
+//    $('#Department').DataTable({
+//        dom: 'Bfrtip',
+//        buttons: [
+//            'copy', 'csv', 'excel', 'pdf', 'print'
+//        ]
+//    });
+//});

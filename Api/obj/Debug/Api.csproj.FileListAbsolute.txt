@@ -84,7 +84,6 @@ D:\VisualBC\AspApi\Api\bin\System.Web.WebPages.Deployment.xml
 D:\VisualBC\AspApi\Api\bin\System.Web.WebPages.Razor.xml
 D:\VisualBC\AspApi\Api\bin\Antlr3.Runtime.pdb
 D:\VisualBC\AspApi\Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\VisualBC\AspApi\Api\obj\Debug\Api.csprojAssemblyReference.cache
 D:\VisualBC\AspApi\Api\obj\Debug\Api.Migrations.addalltbl.resources
 D:\VisualBC\AspApi\Api\obj\Debug\Api.csproj.GenerateResource.cache
 D:\VisualBC\AspApi\Api\obj\Debug\Api.csproj.CoreCompileInputs.cache

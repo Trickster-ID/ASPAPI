@@ -3,7 +3,12 @@
     Layout = "~/Views/Layouts/Layout.cshtml";
 }
 <!-- Trigger the modal with a button -->
-<button id="btnadd" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">+</button>
+<button id="btnadd" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" title="Create New Department">+</button>
+<a href="@Url.Action("Excel","Dept")" class="btn btn-primary"><span>Excel</span></a>
+<a href="@Url.Action("CSV","Dept")" class="btn btn-primary"><span>CSV</span></a>
+<a href="@Url.Action("Report","Dept")" class="btn btn-primary"><span>PDF</span></a>
+@*<button id="btnExport" type="submit" class="btn btn-primary" value="Export">Export to Excel</button>
+    <input type="submit" id="btnExport" value="Export" />*@
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -48,5 +53,18 @@
 </div>
 
 @section scripts{
+
+    @*<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="~/Scripts/table2excel.js"></script>
+        <script type="text/javascript">
+            function () {
+                $("#btnExport").click(function () {
+                    $("#Department").table2excel({
+                        filename: "Department.xls"
+                    });
+                });
+            }
+        </script>*@
+    
     <script src="~/Scripts/Dept.js"></script>
 }
